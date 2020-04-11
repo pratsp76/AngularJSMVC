@@ -4,7 +4,8 @@
     angular.module('app', [
         'ngRoute'
     ])
-        .config(['$routeProvider', function ($routProvider) {
+        .config(['$routeProvider', '$locationProvider', function ($routProvider,$locationProvider) {
+            $locationProvider.hashPrefix('');
             $routProvider
                 .when('/', {
                     controller: 'userCtrl',
